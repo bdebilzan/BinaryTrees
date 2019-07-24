@@ -13,7 +13,6 @@ public class BinaryTree
 		else
 		{
 			Node focusNode = root;
-			
 			Node parent;
 			
 			while(true)
@@ -29,7 +28,8 @@ public class BinaryTree
 						parent.leftChild = newNode;
 						return;
 					}
-				} else
+				} 
+				else
 				{
 					focusNode = focusNode.rightChild;
 					
@@ -48,9 +48,7 @@ public class BinaryTree
 		if(focusNode != null)
 		{
 			inOrderTraverseTree(focusNode.leftChild);
-			
 			System.out.println(focusNode);
-			
 			inOrderTraverseTree(focusNode.rightChild);
 		}
 	}
@@ -60,9 +58,7 @@ public class BinaryTree
 		if(focusNode != null)
 		{
 			System.out.println(focusNode);
-			
 			preOrderTraverseTree(focusNode.leftChild);
-			
 			preOrderTraverseTree(focusNode.rightChild);
 		}
 	}
@@ -71,13 +67,9 @@ public class BinaryTree
 	{
 		if(focusNode != null)
 		{
-			
 			postOrderTraverseTree(focusNode.leftChild);
-			
 			postOrderTraverseTree(focusNode.rightChild);
-			
 			System.out.println(focusNode);
-			
 		}
 	}
 	
@@ -102,7 +94,6 @@ public class BinaryTree
 		}
 		
 		return focusNode;
-		
 	}
 
 	public static void main(String[] args) 
